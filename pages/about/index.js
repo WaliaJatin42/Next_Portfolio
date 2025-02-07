@@ -88,8 +88,21 @@ const aboutData = [
   },
 ];
 
+import Avatar from './../../components/Avatar';
+import Circles from './../../components/Circles';
+import { useState } from "react";
+
+import { motion } from 'framer-motion';
+import { fadeIn } from './../../variants';
+
 const About = () => {
-  return <div>About</div>;
+  const [index, setIndex] = useState(0);
+  return <div>
+    <Circles />
+
+    {/* avatar image*/}
+    <motion.div className="hidden xl:flex absolute bottom-0 -left-[370px]"><Avatar /></motion.div>
+  </div>;
 };
 
 export default About;
